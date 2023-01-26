@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color: hsla(187, 100%, 32%, 1);
+    --chatbox-color:  hsla(0, 0%, 95%, 1);
+    --dark-grey: hsla(211, 16%, 63%, 1);
+    --background-color: hsla(220, 16%, 96%, 1);
+    --main-font: "montserrat", 'san-serif';
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    background-image: url(https://st2.depositphotos.com/36924814/48982/i/450/depositphotos_489829064-stock-photo-medical-health-green-blue-cross.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+.container {
+    background-color: var(--background-color);
+    max-width: 500px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1em;
+}
+
+header .logo{
+    max-width: 50px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: .5em;
+    margin-bottom: 1em;
+}
+
+main {
+    background-color: #fff;
+    margin: 1em;
+    margin-top: -1em;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 400px;
+}
+
+main .bot-avatar {
+    max-width: 9%;
+    margin-top: 1em;
+}
+
+main .name, 
+main .time {
+    color: var(--dark-grey);
+    font-size: .7rem;
+}
+
+.bot-chat {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1em;
+}
+
+.user-chat{
+    align-self: flex-end;
+    margin-bottom: 1em;
+}
+
+.bot-chat .text, 
+.user-chat .text {
+    margin-left: .5em;
+}
+
+.user-chat .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.bot-chat .chat-text,
+.user-chat .chat-text {
+    padding: 1em;
+    margin: .5em 0;
+    font-size: .8rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    color: hsla(217, 21%, 38%, 1);
+}
+
+.bot-chat .chat-text {
+    margin-right: 5em;
+    background-color: var(--chatbox-color);
+    border-radius: 0 20px 20px 20px;
+}
+
+.user-chat .chat-text {
+    margin-left: 5em;
+    background-color: var(--primary-color);
+    border-radius: 20px 0px 20px 20px;
+    color: var(--background-color);
+}
+
+.reply-area {
+    background-color: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1em ;
+}
+
+.user-input {
+    border: none;
+    appearance: none;
+    width: 100%;
+    padding: .5em;
+    font-family: var(--main-font);
+    resize: vertical;
+}
+
+.user-input::placeholder {
+   color: var(--dark-grey);
+   font-size: 1rem;
+   font-family: var(--main-font);
+}
+
+.reply-area i {
+    font-size: 1.2rem;
+    color: var(--dark-grey);
+    margin-left: .5em;
+}
