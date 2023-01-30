@@ -43,7 +43,7 @@ async function botResponse(userInput){
 
     if (userInput.includes("Hello")){
         botResponse = "Hello I am Increase, How are you doing today?"
-        } else if (userInput.includes("how are you doing")){
+        } else if (userInput.includes("are you doing")){
             botResponse = "I am fine. How may I help you today?"
         } else {botResponse}
         
