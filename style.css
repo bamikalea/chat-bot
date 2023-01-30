@@ -155,7 +155,7 @@ main .time {
 }
 
 .user-input:focus, textarea {
-    outline: none !important;
+    outline: none !important ;
 }
 
 .reply-area i {
