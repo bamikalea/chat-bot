@@ -31,23 +31,30 @@ document.getElementById("user-input").addEventListener("keypress", function(e){
         chatData.push(user)
         renderPage()
         document.getElementById("user-input").value = "" //clear text field
-        botResponse()
+        botResponse(userInput)
     }
 } )
 
-async function botResponse(){
+async function botResponse(userInput){
     const numberOfSentence = Math.floor(Math.random() * 3) + 1
     //get dummy text from lorem ipsum api
     const res = await fetch (`https://baconipsum.com/api/?type=all-meat&sentences=${numberOfSentence}&start-with-lorem=1`)
-    const data = await res.json()
+    let botResponse = await res.json()
 
+    if (userInput.includes("Hello")){
+        botResponse = "Hello I am Increase, How are you doing today?"
+        } else if (userInput.includes("how are you doing")){
+            botResponse = "I am fine. How may I help you today?"
+        } else {botResponse}
+        
      //create new bot obj on Enter key press
     let bot = {
         type : "bot-chat",
         name : "support",
-        text : data,
+        text : botResponse,
         time : getChatTime()
-        }
+    }
+   
     chatData.push(bot)
     renderPage()
 }

@@ -62,6 +62,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: 400px;
+    max-height: 50vh;
 }
 
 main .bot-avatar {
@@ -74,6 +75,16 @@ main .time {
     color: var(--dark-grey);
     font-size: .7rem;
 }
+
+.chat-area {
+    overflow: auto;
+    /* overflow-anchor: none; */
+}
+
+.chat-area::-webkit-scrollbar {
+    display: none; 
+}
+
 
 .bot-chat {
     display: flex;
@@ -141,6 +152,10 @@ main .time {
    color: var(--dark-grey);
    font-size: 1rem;
    font-family: var(--main-font);
+}
+
+.user-input:focus, textarea {
+    outline: none !important;
 }
 
 .reply-area i {
